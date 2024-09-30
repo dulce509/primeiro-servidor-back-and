@@ -12,7 +12,7 @@ function mostraHora(request,response){
     response.send(hora)
 }
 function mostraPorta() {
-    console.log('Servidor criado e rodando na porta ${PORTA}')
+    console.log(`Servidor criado e rodando na porta ${PORTA}`)
 }
 
 app.use(router.get('/hora', mostraHora))
