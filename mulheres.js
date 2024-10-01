@@ -26,7 +26,7 @@ async function mostraMulheres(request, response){
 //POST
 async function criaMulher(request, response){
     const novaMulher = new Mulher({        
-        nome: request.body.name,
+        nome: request.body.nome,
         imagem: request.body.imagem,
         minibio: request.body.minibio,
         citacao: request.body.citacao
@@ -46,7 +46,7 @@ async function corrigeMulher(request, response){
         const mulherEncontrada = await Mulher.findById(request.params.id)
 
         if(request.body.nome){
-            mulherEncontrada.nome = request.body.name
+            mulherEncontrada.nome = request.body.nome
         }
     
         if (request.body.minibio){
@@ -73,7 +73,7 @@ async function corrigeMulher(request, response){
 async function deletaMulher(request, response) {
     try {
         await Mulher.findByIdAndDelete(request.params.id)
-        response.json({mensagem:'Mulher deletada com sucesso!'})
+        response.json({messagem:'Mulher deletada com sucesso!'})
     }catch(erro){
         console.log(erro)
     }
