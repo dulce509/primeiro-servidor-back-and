@@ -4,19 +4,19 @@ const mongoose = require ('mongoose')
 const MulherSchema = new mongoose.Schema({
     nome:{
         type: String,
-        required: true
+        required: true,
     },
     imagem:{
         type: String,
-        required: true
+        required: true,
     },
     citacao:{
         type: String,
-        required: true
+        required: true,
     },
     minibio:{
         type: String,
-        required: true,
+        required: true
     }
 })
 
